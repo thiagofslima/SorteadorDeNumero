@@ -1,6 +1,6 @@
 ﻿namespace SorteadorDeNumero
 {
-    partial class Form1
+    partial class frmPrincipal
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -35,8 +35,11 @@
             this.nudFinal = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.lblnumSorteado = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.nudInicial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFinal)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSortear
@@ -120,7 +123,25 @@
             this.lblnumSorteado.Text = "-";
             this.lblnumSorteado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sobreToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(284, 24);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // sobreToolStripMenuItem
+            // 
+            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.sobreToolStripMenuItem.Text = "Sobre";
+            this.sobreToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
+            // 
+            // frmPrincipal
             // 
             this.AcceptButton = this.btnSortear;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,12 +154,17 @@
             this.Controls.Add(this.nudFinal);
             this.Controls.Add(this.nudInicial);
             this.Controls.Add(this.btnSortear);
+            this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sorteador de Número";
             ((System.ComponentModel.ISupportInitialize)(this.nudInicial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFinal)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,6 +179,8 @@
         private System.Windows.Forms.NumericUpDown nudFinal;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblnumSorteado;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
     }
 }
 

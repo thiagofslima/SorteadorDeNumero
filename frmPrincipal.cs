@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SorteadorDeNumero
 {
-    public partial class Form1 : Form
+    public partial class frmPrincipal : Form
     {
-        public Form1()
+        public frmPrincipal()
         {
             InitializeComponent();
         }
@@ -33,6 +33,14 @@ namespace SorteadorDeNumero
         {
             Random rand = new Random();
             return rand.Next(inicial, final + 1);
+        }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmSobre frm = new frmSobre();
+            frm.ShowDialog();
+            this.Visible=true;
         }
     }
 }
