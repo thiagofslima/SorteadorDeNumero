@@ -15,6 +15,7 @@ namespace SorteadorDeNumero
         public frmPrincipal()
         {
             InitializeComponent();
+            nudFinal.Value = 10;
         }
 
         private void btnSortear_Click(object sender, EventArgs e)
