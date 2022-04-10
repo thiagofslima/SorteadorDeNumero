@@ -37,5 +37,11 @@ namespace SorteadorDeNumero
         {
             Process.Start("mailto:thiagofslima@gmail.com");
         }
+
+        private void frmSobre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Escape)
+                this.Close();
+        }
     }
 }

@@ -12,15 +12,16 @@ namespace SorteadorDeNumero
 {
     public partial class frmPrincipal : Form
     {
+        public static string historico;
         public frmPrincipal()
         {
             InitializeComponent();
             nudFinal.Value = 10;
+            nudFinal.Select();
         }
 
         private void btnSortear_Click(object sender, EventArgs e)
         {
-
             int numInicial = (int)nudInicial.Value;
             int numFinal = (int)nudFinal.Value;
 
@@ -28,6 +29,8 @@ namespace SorteadorDeNumero
                 MessageBox.Show("Número Inicial não pode ser maior ou igual ao Número Final");
             else
                 lblnumSorteado.Text = Sortear(numInicial, numFinal).ToString();
+
+            historico+=$"{numInicial} | {numFinal} = {lblnumSorteado.Text} {Environment.NewLine}";
         }
 
         private int Sortear(int inicial, int final)
@@ -39,9 +42,15 @@ namespace SorteadorDeNumero
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmSobre frm = new frmSobre();
-            frm.ShowDialog();
-            this.Visible=true;
+            (new frmSobre()).ShowDialog();
+            this.Visible = true;
+        }
+
+        private void históricoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            new frmHistorico().ShowDialog();
+            this.Visible = true;
         }
     }
 }

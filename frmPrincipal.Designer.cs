@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.btnSortear = new System.Windows.Forms.Button();
             this.nudInicial = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,6 +38,7 @@
             this.lblnumSorteado = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.históricoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.nudInicial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFinal)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -49,6 +51,7 @@
             this.btnSortear.Name = "btnSortear";
             this.btnSortear.Size = new System.Drawing.Size(135, 45);
             this.btnSortear.TabIndex = 2;
+            this.btnSortear.TabStop = false;
             this.btnSortear.Text = "SORTEAR";
             this.btnSortear.UseVisualStyleBackColor = true;
             this.btnSortear.Click += new System.EventHandler(this.btnSortear_Click);
@@ -138,6 +141,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.históricoToolStripMenuItem,
             this.sobreToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -148,10 +152,18 @@
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.sobreToolStripMenuItem.Text = "Sobre";
             this.sobreToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
+            // 
+            // históricoToolStripMenuItem
+            // 
+            this.históricoToolStripMenuItem.Name = "históricoToolStripMenuItem";
+            this.históricoToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.históricoToolStripMenuItem.Text = "Histórico";
+            this.históricoToolStripMenuItem.Click += new System.EventHandler(this.históricoToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -168,6 +180,7 @@
             this.Controls.Add(this.btnSortear);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "frmPrincipal";
@@ -193,6 +206,7 @@
         private System.Windows.Forms.Label lblnumSorteado;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem históricoToolStripMenuItem;
     }
 }
 
