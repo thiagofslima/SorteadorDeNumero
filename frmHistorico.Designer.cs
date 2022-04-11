@@ -77,11 +77,13 @@
             this.Controls.Add(this.txtHistorico);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmHistorico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Historico";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmHistorico_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

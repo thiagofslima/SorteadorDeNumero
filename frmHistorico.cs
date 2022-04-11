@@ -27,5 +27,11 @@ namespace SorteadorDeNumero
         {
             this.Close();
         }
+
+        private void frmHistorico_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Escape)
+                this.Close();
+        }
     }
 }

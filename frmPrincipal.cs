@@ -30,7 +30,7 @@ namespace SorteadorDeNumero
             else
                 lblnumSorteado.Text = Sortear(numInicial, numFinal).ToString();
 
-            historico+=$"{numInicial} | {numFinal} = {lblnumSorteado.Text} {Environment.NewLine}";
+            historico+=$"Inicial: {numInicial} | Final: {numFinal} || {lblnumSorteado.Text}{Environment.NewLine}";
         }
 
         private int Sortear(int inicial, int final)
@@ -42,7 +42,7 @@ namespace SorteadorDeNumero
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            (new frmSobre()).ShowDialog();
+            new frmSobre().ShowDialog();
             this.Visible = true;
         }
 
